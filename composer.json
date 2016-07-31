@@ -2,7 +2,7 @@
     "name": "jasonrgd/edmundsapi",
     "license": "MIT",
     "type": "project",
-    "description": "Simple API to download car and make model",
+    "description": "Simple API to download car make and model",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
