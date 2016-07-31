@@ -27,13 +27,13 @@
     <div class="row">
         <h2> Enter Make and Model </h2>
         <form>
-            <div class="form-group">
+            <div class="form-group"  ng-controller="MakeCtrl">
                 <label for="VehicleMake">Vehicle Make </label>
-                <input type="text" class="form-control" id="VehicleMake" placeholder="Enter Make">
+                <autocomplete ng-model="result" attr-placeholder="Enter Make..." click-activation="true" data="makes" on-type="getMakes"></autocomplete>
             </div>
-            <div class="form-group">
-                <label for=""> Vehicle Model </label>
-                <input type="text" class="form-control" id="VehicleModel" placeholder="Enter Model">
+            <div class="form-group" ng-controller="ModelCtrl">
+                <label for="VehicleModel"> Vehicle Model </label>
+                <autocomplete id="VehicleModel" ng-model="result" attr-placeholder="Enter Model..." click-activation="true" data="model" on-type="getModelByMakeIdAndSearchTerm"></autocomplete>
             </div>
         </form>
     </div>

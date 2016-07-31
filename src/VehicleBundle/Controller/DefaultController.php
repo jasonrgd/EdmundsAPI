@@ -24,7 +24,7 @@ class DefaultController extends Controller
     /**
      * @Route("/admin/get/makes")
      */
-    public function makeAction()
+    public function makeAction(Request $request)
     {
 
         $makeRepository = $this->getDoctrine()->getRepository('VehicleBundle:Make');
