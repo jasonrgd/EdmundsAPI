@@ -29,7 +29,7 @@
         <form>
             <div class="form-group"  ng-controller="MakeCtrl">
                 <label for="VehicleMake">Vehicle Make </label>
-                <autocomplete ng-model="result" attr-placeholder="Enter Make..." click-activation="true" data="makes" on-type="getMakes"></autocomplete>
+                <autocomplete id="VehicleMake" ng-model="result" attr-placeholder="Enter Make..." click-activation="true" data="makes" on-type="getMakes"></autocomplete>
             </div>
             <div class="form-group" ng-controller="ModelCtrl">
                 <label for="VehicleModel"> Vehicle Model </label>
