@@ -1,0 +1,11 @@
+services:
+#        https://api.edmunds.com/api/vehicle/v2/makes?view=basic&fmt=json&api_key=54yf666gkwgv32tuuewp4n82
+
+
+parameters:
+    api_key: 54yf666gkwgv32tuuewp4n82
+    api_endpoint: https://api.edmunds.com/api/vehicle/v2/
+    view: basic
+    fmt: json
+
+

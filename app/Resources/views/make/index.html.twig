@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Make list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Makenicename</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for make in makes %}
+            <tr>
+                <td><a href="{{ path('make_show', { 'id': make.id }) }}">{{ make.id }}</a></td>
+                <td>{{ make.name }}</td>
+                <td>{{ make.makeNiceName }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('make_show', { 'id': make.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('make_edit', { 'id': make.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('make_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

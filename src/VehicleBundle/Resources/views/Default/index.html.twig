@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="starter-template">
+                <h1>Edmunds Data Retriever</h1>
+                <p class="lead">Use this app as a quick way to retrieve data <br>from developer.edmunds.com</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div ng-controller="ProgressDemoCtrl">
+                <h3>
+                    Retrieve Data Now
+                    <button type="button" class="btn btn-primary" ng-click="retrieve()"> Click Here </button>
+                </h3>
+
+                <small><em>{[{progressMsg}]}</em></small>
+                <uib-progressbar class="progress-striped active" value="dynamic" type="{[{type}]}">{[{type}]} <i ng-show="showWarning">!!! Watch out !!!</i></uib-progressbar>
+
+
+            </div>
+
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <h2> Enter Make and Model </h2>
+        <form>
+            <div class="form-group">
+                <label for="VehicleMake">Vehicle Make </label>
+                <input type="text" class="form-control" id="VehicleMake" placeholder="Enter Make">
+            </div>
+            <div class="form-group">
+                <label for=""> Vehicle Model </label>
+                <input type="text" class="form-control" id="VehicleModel" placeholder="Enter Model">
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block stylesheets %}
+{% endblock %}
+
